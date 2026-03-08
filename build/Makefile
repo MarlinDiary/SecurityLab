@@ -129,6 +129,19 @@ notebook_lite/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_lite.dir/build.make CMakeFiles/notebook_lite.dir/build
 .PHONY : notebook_lite/fast
 
+#=============================================================================
+# Target rules for targets named notebook_pro
+
+# Build rule for target.
+notebook_pro: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 notebook_pro
+.PHONY : notebook_pro
+
+# fast build rule for target.
+notebook_pro/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/build
+.PHONY : notebook_pro/fast
+
 notebook_lite/main.o: notebook_lite/main.c.o
 .PHONY : notebook_lite/main.o
 
@@ -153,6 +166,54 @@ notebook_lite/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_lite.dir/build.make CMakeFiles/notebook_lite.dir/notebook_lite/main.c.s
 .PHONY : notebook_lite/main.c.s
 
+notebook_pro/main.o: notebook_pro/main.c.o
+.PHONY : notebook_pro/main.o
+
+# target to build an object file
+notebook_pro/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/notebook_pro/main.c.o
+.PHONY : notebook_pro/main.c.o
+
+notebook_pro/main.i: notebook_pro/main.c.i
+.PHONY : notebook_pro/main.i
+
+# target to preprocess a source file
+notebook_pro/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/notebook_pro/main.c.i
+.PHONY : notebook_pro/main.c.i
+
+notebook_pro/main.s: notebook_pro/main.c.s
+.PHONY : notebook_pro/main.s
+
+# target to generate assembly for a file
+notebook_pro/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/notebook_pro/main.c.s
+.PHONY : notebook_pro/main.c.s
+
+notebook_pro/noise_bank.o: notebook_pro/noise_bank.c.o
+.PHONY : notebook_pro/noise_bank.o
+
+# target to build an object file
+notebook_pro/noise_bank.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/notebook_pro/noise_bank.c.o
+.PHONY : notebook_pro/noise_bank.c.o
+
+notebook_pro/noise_bank.i: notebook_pro/noise_bank.c.i
+.PHONY : notebook_pro/noise_bank.i
+
+# target to preprocess a source file
+notebook_pro/noise_bank.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/notebook_pro/noise_bank.c.i
+.PHONY : notebook_pro/noise_bank.c.i
+
+notebook_pro/noise_bank.s: notebook_pro/noise_bank.c.s
+.PHONY : notebook_pro/noise_bank.s
+
+# target to generate assembly for a file
+notebook_pro/noise_bank.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/notebook_pro.dir/build.make CMakeFiles/notebook_pro.dir/notebook_pro/noise_bank.c.s
+.PHONY : notebook_pro/noise_bank.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +223,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... notebook_lite"
+	@echo "... notebook_pro"
 	@echo "... notebook_lite/main.o"
 	@echo "... notebook_lite/main.i"
 	@echo "... notebook_lite/main.s"
+	@echo "... notebook_pro/main.o"
+	@echo "... notebook_pro/main.i"
+	@echo "... notebook_pro/main.s"
+	@echo "... notebook_pro/noise_bank.o"
+	@echo "... notebook_pro/noise_bank.i"
+	@echo "... notebook_pro/noise_bank.s"
 .PHONY : help
 
 

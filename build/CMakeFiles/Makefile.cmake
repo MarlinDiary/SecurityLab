@@ -49,4 +49,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/notebook_lite.dir/DependInfo.cmake"
+  "CMakeFiles/notebook_pro.dir/DependInfo.cmake"
   )
