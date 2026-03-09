@@ -8,7 +8,6 @@ void print_banner(void);
 void about(void);
 void read_input(char *buffer, size_t buffer_size);
 void trim_newline(char *text);
-char expected_password_char(size_t index);
 int check_password(const char *candidate);
 void show_access_denied(void);
 void show_notes(void);
@@ -74,41 +73,23 @@ void trim_newline(char *text)
 
 int check_password(const char *candidate)
 {
-    size_t index;
-
     if (strlen(candidate) != PASSWORD_LENGTH) {
         return 0;
     }
 
-    for (index = 0; index < PASSWORD_LENGTH; ++index) {
-        if (candidate[index] != expected_password_char(index)) {
-            return 0;
-        }
+    if (strncmp(candidate, "ink", 3) != 0) {
+        return 0;
+    }
+
+    if (strncmp(candidate + 3, "20", 2) != 0) {
+        return 0;
+    }
+
+    if (strcmp(candidate + 5, "26") != 0) {
+        return 0;
     }
 
     return 1;
-}
-
-char expected_password_char(size_t index)
-{
-    switch (index) {
-        case 0:
-            return 'i';
-        case 1:
-            return 'n';
-        case 2:
-            return 'k';
-        case 3:
-            return '2';
-        case 4:
-            return '0';
-        case 5:
-            return '2';
-        case 6:
-            return '6';
-        default:
-            return '\0';
-    }
 }
 
 void show_access_denied(void)
