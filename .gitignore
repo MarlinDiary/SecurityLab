@@ -9,3 +9,10 @@ build-*/
 
 # Generated release packages
 dist/
+
+# Source projects (APKs are in /apks)
+clock/
+tomato/
+wallpaper/
+rss/
+tasks/
